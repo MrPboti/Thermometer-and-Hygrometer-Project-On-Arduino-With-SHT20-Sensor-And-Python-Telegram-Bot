@@ -5,7 +5,7 @@ from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
 
-com = "com3"
+com = ""
 Arduino_Serial = serial.Serial(com,9600)  
 
 
@@ -40,7 +40,7 @@ def no(update: Update, context: CallbackContext) -> None:
 
 def main():
 
-    updater = Updater("1572298958:AAEcW-PurWQAbnKQ0R-I8f51s3adnfe5Z1A", use_context=True)
+    updater = Updater("Token", use_context=True)
 
     dispatcher = updater.dispatcher
 
