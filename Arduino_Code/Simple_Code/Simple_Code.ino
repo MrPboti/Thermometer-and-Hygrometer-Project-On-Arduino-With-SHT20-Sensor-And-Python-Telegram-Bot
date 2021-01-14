@@ -19,17 +19,15 @@ void loop()
      
      if (value == '1')
         {
-          float temp = sht20.readTemperature();               // Read Temperature
+          float temp = sht20.readTemperature();
+          float humd = sht20.readHumidity();
+          
+          Serial.print(millis());
           Serial.print(temp);
+          Serial.print(humd);
           Serial.println();
+          delay(1000);
         }
-     
-     else if (value == '2')
-        {
-         float humd = sht20.readHumidity();                  // Read Humidity
-         Serial.print(humd);
-         Serial.println(); 
-         }
-     
+        
    
    }
