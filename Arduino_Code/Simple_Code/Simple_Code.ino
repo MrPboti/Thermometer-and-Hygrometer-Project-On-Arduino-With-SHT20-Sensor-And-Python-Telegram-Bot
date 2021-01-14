@@ -21,12 +21,13 @@ void loop()
         {
           float temp = sht20.readTemperature();
           float humd = sht20.readHumidity();
-          
           Serial.print(millis());
+          Serial.print(" ");
           Serial.print(temp);
+          Serial.print(" ");
           Serial.print(humd);
           Serial.println();
-          delay(1000);
+          delay(2000);
         }
         
    
